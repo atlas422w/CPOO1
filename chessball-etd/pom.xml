@@ -86,11 +86,16 @@
                 <version>0.8.12</version>
                 <configuration>
                     <!-- JDK 25 : l'instrumentation de ByteBuddy/Mockito fait
-                         cracher six exceptions (sans conséquence, mais elles
-                         inquiètent les étudiants) — on les exclut. -->
+                         cracher des exceptions (sans conséquence, mais elles
+                         inquiètent les étudiants) — on les exclut. La dernière
+                         ligne vise les mocks des interfaces DU PROJET
+                         (chessball.xxx.X$MockitoMock$…, TP5 Q5–Q7), que les
+                         deux premières ne couvrent pas : 12 traces → 0,
+                         vérifié le 2026-10-01. -->
                     <excludes>
                         <exclude>net/bytebuddy/**</exclude>
                         <exclude>org/mockito/**</exclude>
+                        <exclude>*$MockitoMock$*</exclude>
                     </excludes>
                 </configuration>
                 <executions>

@@ -10,7 +10,7 @@ Objet (Java 21, Maven, JUnit 5, Mockito, JaCoCo, PIT). Récupération : bouton
 | `tpa-test-etd/` | TP2 (Q12) | `MyPoint` et ses fautes volontaires, deux tests d'exemple : la javadoc est la spécification |
 | `chessball-etd/` | TP3 à TP5 | le squelette du moteur **ChessBall** puis de son service : `Position`, `Coup`, les énumérations et `ResultatCoup` sont fournis, tout le reste est à écrire question après question |
 | `suites-prof/` | TP2 Q11, TP3 Q10, TP4 Q5 | les suites de tests de l'encadrant·e, à copier dans `src/test/java2/` quand le sujet le demande (voir son README) |
-| `extras/` | TP4 Q6–Q7 | `moteur/StrategieAdversaire.java` (l'interface de l'IA), `ui/Console.java` et `ui/Main.java` (le match IA contre IA en console) |
+| `extras/` | TP4 Q0 et Q7 | `moteur/StrategieAdversaire.java` (l'interface de l'IA), `ui/Console.java` et `ui/Main.java` (le match IA contre IA en console) |
 
 Les sujets (PDF) et les documents du client ChessBall sont sur Moodle.
 
@@ -23,9 +23,10 @@ cd <dossier-de-votre-binome>/chessball-etd
 mvn -q test
 ```
 
-Aucun test au départ, c'est normal. Le rendu du module (TP5) est un dépôt
-Git de votre binôme contenant le projet, vos modèles dans `docs/` et le
-rapport : `git init` quand vous voulez, aucune forge imposée.
+Aucun test au départ, c'est normal. Le rendu noté du module (feuille
+« CPOO1 — Le rendu », distribuée avec le TP3) est un dépôt Git de votre
+binôme sur le GitLab de l'INSA Rennes, et un rapport PDF : `git init` dès
+le TP3.
 
 ## Environnement
 

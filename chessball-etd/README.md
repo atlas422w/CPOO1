@@ -38,8 +38,8 @@ ces signatures.
 |---|---|---|
 | TP3 Q10 | `suites-prof/chessball-tp3/` | `src/test/java2/chessball/` |
 | TP4 Q0 | `extras/moteur/StrategieAdversaire.java` | `src/main/java/chessball/moteur/` |
-| TP4 Q7 | `suites-prof/chessball-tp4/` | `src/test/java2/chessball/` |
-| TP4 Q9 | `extras/ui/Console.java`, `extras/ui/Main.java` | `src/main/java/chessball/ui/` |
+| TP4 Q5 | `suites-prof/chessball-tp4/` | `src/test/java2/chessball/` |
+| TP4 Q7 | `extras/ui/Console.java`, `extras/ui/Main.java` | `src/main/java/chessball/ui/` |
 
 `src/test/java2` est déclaré comme sources de test dans le `pom.xml` :
 `mvn test` l'exécute, quel que soit l'IDE.
@@ -60,9 +60,10 @@ partie IA contre IA du TP4 ; la mutation du TP5 (rapport dans
 
 ## Rendu
 
-Le rendu du module (TP5) est un dépôt Git contenant ce projet, le cahier des
-charges complété et vos modèles dans `docs/`, et le rapport
-`docs/rapport.md`. `git init` ici quand vous voulez, aucune forge imposée.
+Le rendu noté du module est décrit dans la feuille « CPOO1 — Le rendu »,
+distribuée avec le TP3 : un dépôt Git de votre binôme sur le GitLab de
+l'INSA Rennes (public ou privé), qui contient ce projet, et un rapport PDF,
+envoyés par email. `git init` ici dès le TP3.
 
 ## `docs/cahier-des-charges.md`
 
@@ -70,5 +71,4 @@ Le **cahier des charges du binôme** : un gabarit dont les sections 1 et 2
 sont les deux documents du client, et dont tout le reste (réponses
 officielles, glossaire, modèles, scénarios, traçabilité vers le code et les
 tests) se remplit du TD2 au TP5. Les `.puml`, `.uvl` et leurs SVG se mettent
-à côté. C'est ce cahier, complété, qui est rendu avec le code et le rapport
-à la fin du module.
+à côté. Il vit dans le dépôt avec le code jusqu'au rendu.

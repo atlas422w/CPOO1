@@ -66,7 +66,7 @@ class SuiteProfTP4Test {
             + "c5-d4@e3 c5-d5 c5-e3^d4 d6-c6 d6-d5 d6-e6 e5-c3^d4 e5-d4@c3 e5-d5 e5-e4 e5-e6 e5-f4 e5-f5 "
             + "f6-e6 f6-f5 f6-g5 f6-g6").split(" ")).sorted().toList();
 
-    // ------------------------------------------- Q3 : position officielle
+    // ------------------------------------------- Q1 : position officielle
 
     @Test @DisplayName("la position officielle : dix pièces, ballon en d4, Bleus au trait")
     void positionOfficielle() {
@@ -83,7 +83,7 @@ class SuiteProfTP4Test {
         assertTrue(p.vainqueur().isEmpty());
     }
 
-    // ------------------------------------------- Q7 : l'oracle officiel
+    // ------------------------------------------- Q5 : l'oracle officiel
 
     @Test @DisplayName("les 25 coups légaux de la position de départ (kit §8.1)")
     void vingtCinqCoupsDeDepart() {
@@ -192,7 +192,7 @@ class SuiteProfTP4Test {
         assertEquals(Refus.PARTIE_TERMINEE, p.verifier(new Deplacement(Position.of("b1"), NORD)));
     }
 
-    // ------------------------------------------- Q4–Q6 : chaque refus, chaque effet
+    // ------------------------------------------- Q2–Q4 : chaque refus, chaque effet
 
     @Test void pasDePieceEtPasSonTour() {
         Partie p = Partie.positionOfficielle();
@@ -331,7 +331,7 @@ class SuiteProfTP4Test {
         assertEquals(Refus.RESERVE_AUX_DEFENSEURS, p.verifier(new Tacle(Position.of("c5"), SUD)));
     }
 
-    // ------------------------------------------- l'adversaire (contrat, Q4)
+    // ------------------------------------------- l'adversaire (contrat, Q2)
 
     @Test void unAdversaireQuiRenvoieUnCoupIllegalEstRefuseProprement() {
         Partie p = Partie.positionOfficielle();

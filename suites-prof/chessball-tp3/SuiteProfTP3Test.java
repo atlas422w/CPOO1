@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("TP3 — du modèle au code, moteur statique")
 class SuiteProfTP3Test {
 
-    // ---- Q3 : Position -----------------------------------------------------
+    // ---- Q1 : Position -----------------------------------------------------
     @Test void positionValide() { assertEquals(new Position(3, 3), Position.of("d4")); }
     @Test void positionCoins() {
         assertEquals("a1", Position.of("a1").toString());
@@ -54,7 +54,7 @@ class SuiteProfTP3Test {
         assertEquals(Couleur.BLEUS, Couleur.ROUGES.adverse());
     }
 
-    // ---- Q4 : Coup ---------------------------------------------------------
+    // ---- Q2 : Coup ---------------------------------------------------------
     @Test void coupsEgauxParValeur() {
         assertEquals(new Poussee(Position.of("c5"), SUD_EST), new Poussee(Position.of("c5"), SUD_EST));
         assertNotEquals(new Poussee(Position.of("c5"), SUD_EST), new Deplacement(Position.of("c5"), SUD_EST));
@@ -73,7 +73,7 @@ class SuiteProfTP3Test {
         assertEquals(SUD_EST, c.direction());
     }
 
-    // ---- Q5/Q6 : Equipe et Piece ---------------------------------------------
+    // ---- Q3/Q4 : Equipe et Piece ---------------------------------------------
     @Test void ajouterEtablitLesDeuxSens() {
         Equipe bleus = new Equipe(Couleur.BLEUS);
         Piece a = new Piece(TypePiece.ATTAQUANT);
@@ -108,7 +108,7 @@ class SuiteProfTP3Test {
         assertThrows(UnsupportedOperationException.class, () -> bleus.pieces().clear());
     }
 
-    // ---- Q7 : Plateau et Case, composition -----------------------------------
+    // ---- Q5 : Plateau et Case, composition -----------------------------------
     @Test void plateauCreeSes42Cases() {
         Plateau p = new Plateau();
         assertNotNull(p.caseA(Position.of("a1")));
@@ -147,7 +147,7 @@ class SuiteProfTP3Test {
         assertTrue(p.estLibre(Position.of("c4")));
     }
 
-    // ---- Q8 : le ballon --------------------------------------------------------
+    // ---- Q6 : le ballon --------------------------------------------------------
     @Test void leBallonOccupeSaCaseSansEtreUnePiece() {
         Plateau p = new Plateau();
         Ballon b = new Ballon(p, Position.of("d4"));

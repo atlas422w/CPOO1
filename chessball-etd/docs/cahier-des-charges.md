@@ -1,28 +1,29 @@
 # ChessBall — cahier des charges du binôme
 
-> CPOO1 — 3INFO, 2026-2027. **Gabarit à compléter** du TD2 au TP5 : c'est le
-> document rendu à la fin du module, avec le code. Les sections 1 et 2
+> CPOO1 — 3INFO, 2026-2027. **Gabarit à compléter** du TD2 au TP5, qui vit
+> dans le dépôt avec le code. Les sections 1 et 2
 > reprennent les deux documents du client tels quels (ils ne disent pas
-> tout, c'est voulu). Tout le reste est à vous : les réponses officielles
-> obtenues en séance, le glossaire, les modèles, les scénarios, la
+> tout, c'est voulu). Tout le reste est à vous : votre tableau des
+> décisions (TD2) confronté aux décisions du club (TP3, TP4), le glossaire,
+> les modèles, les scénarios, la
 > traçabilité vers le code et les tests. Un diagramme se donne par son
 > source (`.puml`, `.uvl`, dans ce dossier) **et** son image exportée
 > (`.svg`), référencée ici par `![titre](fichier.svg)`.
 >
 > Remplacez chaque « *À compléter* » ; supprimez les consignes en italique
-> quand la section est faite. Chaque décision du client porte un numéro
-> (J1, J2… pour le jeu ; S1, S2… pour le service) : citez-les dans les
-> modèles, les tests et le rapport.
+> quand la section est faite. Vos décisions portent un numéro D1, D2… ;
+> celles du club J1… J8 (jeu, publiées au TP3) et S1… S9 (service, publiées
+> au TP4) : citez-les dans les modèles, les tests et le rapport.
 
 | Section | Séance | Rempli ? |
 |---|---|---|
-| 3. Réponses officielles du client (jeu) | TD2 | |
+| 3. Tableau des décisions (jeu), décisions du club et leur place dans le code | TD2 → TP3 | |
 | 4. Acteurs et périmètre | TD2 | |
 | 5. Glossaire | TD2 | |
-| 6. Modèle du domaine et diagrammes d'objets | TD2 (papier) → TP3 (studio) → TP4 (service) | |
+| 6. Modèle du domaine et diagrammes d'objets | TD2 (papier) → studio ; TP4 (service) | |
 | 7. Stories, critères, scénarios | TD2 → TP5 | |
 | 8. Machine à états de la partie | TD2 | |
-| 9. Réponses officielles du client (service) et cas d'utilisation | TP4 | |
+| 9. Décisions sur le service et cas d'utilisation | TD2 → TP4 | |
 | 10. Variantes : le feature model | TP4 | |
 | 11. Points de variation dans le code | TP4–TP5 | |
 | 12. Traçabilité modèle ↔ code ↔ tests | TP3–TP5 | |
@@ -30,8 +31,8 @@
 
 ## 1. Le jeu, tel que le client l'a écrit
 
-*Copie conforme de `regles-chessball.pdf`. Ne pas corriger ce texte : les
-corrections sont vos réponses officielles, en §3.*
+*Copie conforme de `regles-chessball.pdf`. Ne pas corriger ce texte : ses
+zones d'ombre sont tranchées en §3.*
 
 ChessBall est un jeu de football sur un petit damier, à deux joueurs.
 Chacun dirige une équipe de cinq pièces et cherche à pousser l'unique
@@ -77,7 +78,7 @@ s'arrête sur une ligne de but ; rangée `1`, les Bleus ont gagné ; rangée
 
 ## 2. Le service, tel que le client l'a écrit
 
-*Copie conforme de `service-chessball.pdf` (remis au TP4).*
+*Copie conforme de `service-chessball.pdf` (joint au sujet du TD2).*
 
 Le club ChessBall grandit et nous voulons un petit service en ligne pour
 organiser la vie du club : pas une interface graphique pour l'instant, juste
@@ -92,17 +93,32 @@ club à tout moment. Il arrive que quelqu'un déclare forfait avant ou pendant
 un match. Par ailleurs, un joueur ne devrait pas disputer trop de matchs à la
 fois.
 
-## 3. Réponses officielles du client (jeu) — TD2
+## 3. Tableau des décisions (jeu) et décisions du club — TD2, TP3
 
-*Une ligne par ambiguïté repérée : la question fermée que vous avez posée,
-la réponse du client. Numérotez J1, J2… Au moins six. Les ambiguïtés que
-vous n'avez pas posées mais dont une suite de tests de l'encadrant·e a
-révélé la réponse (TP3, TP4) s'ajoutent ici, marquées « (suite prof) ».*
+**3.1 Vos décisions, confrontées à celles du club.**
 
-| N° | Question posée au client | Réponse officielle |
-|---|---|---|
-| J1 | *À compléter* | |
-| J2 | | |
+*Au TD2 : une ligne par ambiguïté repérée, numérotée D1, D2… (au moins
+six) : ce que dit le texte (citation, ou « rien sur… »), au moins deux
+lectures, votre décision et sa justification en une ligne. Au TP3 : la
+décision du club qui y répond (J1–J8) et l'écart, avec ce qu'il change
+dans vos modèles. Une décision du club qui ne répond à aucune de vos lignes
+s'ajoute en bas, colonne D vide : c'est une ambiguïté que vous n'aviez pas
+vue.*
+
+| D | Ce que dit le texte | Lectures possibles | Votre décision, justifiée (TD2) | Club (TP3) | Écart, et ce qu'il change |
+|---|---|---|---|---|---|
+| D1 | *À compléter* | | | | |
+| D2 | | | | | |
+
+**3.2 Les décisions du club dans le code** (TP3 Q11). *Pour chaque décision
+J1 à J8 : la ou les classes et méthodes qu'elle touche (y compris celles du
+TP4, et y compris par une vérification qu'on n'écrit pas), la séance où
+elle est codée, le test qui la vérifie.*
+
+| J | Classe(s) et méthode(s) | Codée quand | Vérifiée par |
+|---|---|---|---|
+| J1 | *À compléter* | | |
+| J2 | | | |
 
 ## 4. Acteurs et périmètre — TD2
 
@@ -140,7 +156,9 @@ ceux du diagramme de classes (§6) et du code (§12) : même mot partout.*
 
 ## 6. Modèle du domaine et diagrammes d'objets — TD2, TP3, TP4
 
-**6.1 Le modèle du domaine** (`domaine.puml` / `domaine.svg`). *Concepts,
+**6.1 Le modèle du domaine** (`domaine.puml` / `domaine.svg`). *Le
+diagramme du TD2, mis au propre dans PlantUML Studio (le TP3
+code directement la conception imposée, qui en découle). Concepts,
 associations nommées, cardinalités dans les deux sens, compositions
 justifiées, le ballon et sa contrainte (jamais sur une case occupée par une
 pièce). Étendu au service au TP4 (Compte, Joueur, Match, Appariement,
@@ -167,9 +185,8 @@ acteurs.*
 
 **7.2 Critères d'acceptation** *d'au moins une story.*
 
-**7.3 Scénarios Gherkin.** *Nominal, refus, cas limite ; le scénario
-manquant révélé par la machine à états (§8). Chaque scénario nomme le test
-qui le joue (§12).*
+**7.3 Scénarios Gherkin.** *Nominal, refus, cas limite. Chaque scénario
+nomme le test qui le joue (§12).*
 
 ```gherkin
 Scénario: À compléter
@@ -184,17 +201,20 @@ contrat dit que le scénario ne dit pas.*
 ## 8. Machine à états de la partie — TD2
 
 *`etats-partie.puml` / `.svg` : trait qui alterne, coup refusé, période sans
-représailles après un tacle, but, fins sans but décidées par le client.
-Événement et garde sur chaque transition ; la transition qu'aucun scénario ne
-couvrait.*
+représailles après un tacle, but, fins sans but (celles de votre tableau
+au TD2, celles du club J1 et J2 à partir du TP3). Événement et garde sur
+chaque transition.*
 
 ![Machine à états de la partie](etats-partie.svg)
 
-## 9. Réponses officielles du client (service) et cas d'utilisation — TP4
+## 9. Décisions sur le service et cas d'utilisation — TD2, TP4
 
-| N° | Question posée au client | Réponse officielle |
-|---|---|---|
-| S1 | *À compléter (« force comparable » ? « trop de matchs » ? « à la Elo » ? forfait ? pseudo ? qui joue les Bleus ?)* | |
+*Même forme qu'en §3 : vos décisions sur le service (TD2, s'il y en a),
+puis celles du club (S1–S9, TP4) et l'écart.*
+
+| D | Ce que dit le texte | Lectures possibles | Votre décision, justifiée (TD2) | Club (TP4) | Écart, et ce qu'il change |
+|---|---|---|---|---|---|
+| D… | *À compléter (« force comparable » ? « trop de matchs » ? « à la Elo » ? forfait ? pseudo ? qui joue les Bleus ?)* | | | | |
 
 **Cas d'utilisation du service.** *Le diagramme (`service-uc.puml`), et pour
 « Demander un match » (rédigé au CM1) la liste de ses chemins, chacun avec le
@@ -212,8 +232,8 @@ configurations valides (votre calcul, puis le compteur d'UVL Studio).*
 
 *Quels points de variation du feature model existent déjà dans le code (la
 règle de nul, l'IA adverse, l'appariement, qui commence…), sous quelle forme
-(paramètre, interface + implémentations : le patron Stratégie,
-`strategie.puml`), et lesquels n'y sont pas.*
+(paramètre, interface + implémentations : le patron Stratégie), et lesquels
+n'y sont pas.*
 
 ## 12. Traçabilité modèle ↔ code ↔ tests — TP3 à TP5
 
@@ -233,8 +253,6 @@ modèle.*
 
 ## 13. Rapport de test — TP5
 
-*Voir `rapport.md` (plan imposé au TP5 : ce qui est implémenté, couverture
-avant/après, score de mutation avant/après, doubles, ce que les tests n'ont
-pas trouvé). Résumez ici en cinq lignes les chiffres finaux : couverture de
+*Résumez ici en cinq lignes les chiffres finaux : couverture de
 branches par paquet, score de mutation par paquet, nombre de tests, et les
 nombres de coups légaux obtenus sur les positions de référence.*
