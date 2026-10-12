@@ -1,6 +1,7 @@
 import java.util.Optional;
 
 public  class Plateau {
+    private Case[Position.COLONNES][Position.RANGEES] plateau= 
   public Plateau() {
 
   }
