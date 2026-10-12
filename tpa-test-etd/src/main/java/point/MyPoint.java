@@ -40,7 +40,14 @@ public class MyPoint {
 	 * @param pt The IMyPoint, if null the default value (0,0) will be used.
 	 */
 	public MyPoint(final MyPoint pt) {
-		this(pt.x, pt.y);
+		if(pt==null){
+			this.x=0;
+			this.y=0;
+		}
+		else{
+			this.x=pt.getX();
+			this.y=pt.getY();
+		}
 	}
 
 	/**
@@ -55,7 +62,9 @@ public class MyPoint {
 	 * @param newX The new X coordinate. Must be valid (not equal Double.NaN), otherwise nothing is done.
 	 */
 	public void setX(final double newX) {
-		x = newX;
+		if(!Double.isNaN(newX)){
+			x = newX;
+		}
 	}
 
 	/**
@@ -89,12 +98,12 @@ public class MyPoint {
 	 * @return the computed point.
 	 * @throws IllegalArgumentException When the given parameter is null.
 	 */
-	public MyPoint horizontalSymmetry(final MyPoint origin) {
-		if(origin == null) {
-			throw new IllegalArgumentException();
-		}
-		return new MyPoint(2. * origin.getX() - x, y);
-	}
+public MyPoint horizontalSymmetry(final MyPoint origin) {
+    if (origin == null) {
+        throw new IllegalArgumentException();
+    }
+    return new MyPoint(x, (2 * origin.getY()) - y);
+}
 
 
 	/**
@@ -104,8 +113,10 @@ public class MyPoint {
 	 * @param ty The Y translation.
 	 */
 	public void translate(final double tx, final double ty) {
-		setX(x + tx);
-		setY(y + ty);
+		if (!Double.isNaN(tx) && !Double.isNaN(ty)) {
+			setX(x + tx);
+			setY(y + ty);
+		}
 	}
 
 
